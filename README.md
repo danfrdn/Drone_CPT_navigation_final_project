@@ -1,4 +1,4 @@
-# Chemical Plume Tracing By Drone In Turbulant Wind #
+# Drone Chemical Plume Tracing In Turbulant Wind #
 Drone navigation in turbulent wind, the navigation algorithm is based on moth biomimetics. In turbulent wind, airosols disperse in a non-laminar fashion, resulting in airosol plumes that vary in size and consistency. CPT (chemical plume tracing) is the challenge of navigating to the source of the airosol and is documented heavily in literature. 
 
 We have based our algorithm on a study on Moth navigation via feromone plumes to find female counterparts (Moth-inspired navigation algorithm in a turbulent odor plume from a pulsating source, Liberzon 2018) .
