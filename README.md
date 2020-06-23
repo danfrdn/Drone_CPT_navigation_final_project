@@ -4,7 +4,7 @@ Drone navigation in turbulent wind, the navigation algorithm is based on moth bi
 We have based our algorithm on a study on Moth navigation via feromone plumes to find female counterparts (Moth-inspired navigation algorithm in a turbulent odor plume from a pulsating source, Liberzon 2018) .
 
  ### Our mission: ###
-Create an algorithm which can detect the source, of any airosol the client would like to trace.
+Create an algorithm which can detect the source of any airosol/chemical the client would like to trace.
 
 All a user will need to do is attach the relevent sensor to the drone, and create a simple detection function that returns a boolean "True" or "False", measuring when the drone detects a plume.
 
