@@ -20,12 +20,18 @@ os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp"
 
 
 def write_detect_func_output():
+    """
+    Writes the output of your detect() function to detection_output.txt file - this is done so the algorithm can write and read the output while navigating in parallel.
+    """
     f_handle = open("detection_output.txt", "w")
     output = detect()
     f_handle.write(str(output))
     f_handle.close()
 
 def read_detect_func_output():
+    """
+    Reads the output of your detect() function to detection_output.txt file - this is done so the algorithm can write and read the output while navigating in parallel.
+    """
     f_handle = open("detection_output.txt", "r")
     state = f_handle.readline()
     f_handle.close()
@@ -70,6 +76,11 @@ def wait_for_plume_or_until_t(tc, casting_memory):
 
 
 def turn_angle_needed_to_face_upwind_in_rad(turn_memory):
+    """
+    Currently the drone cannot detect what direction is "upwind". This function uses the "casting_memory" to remember all the turns the drone has made and return to angle=0.
+    :param turn_memory - a list of all turns the drone has made (casting_memory).
+    :return: The angle the drone needs to turn in order to be facing "upwind" [rad]
+    """
     turn_sum = 0
     for i in turn_memory:
         turn_sum+=i
@@ -163,6 +174,7 @@ def count_time_and_fly_straight(casting_memory):
 
 def dx(tc, acceleration=0.2):
     """
+    The drone needs to fly based on time tc. Via testing we have concluded the drones acceleration and by implementing a simple equation - we calculate the distance needed to fly for time tc.
     acceleration = 0.2 m/s
     """
     return acceleration * (tc**2)/2
