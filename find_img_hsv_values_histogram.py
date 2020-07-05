@@ -30,7 +30,7 @@ def image_histogram(img_dir):
     ax.set_ylabel('')
     ax.set_zlabel('# Pixels')
     ax.set_yticks(ticks=[10,20,30])
-    ax.set_yticklabels(labels = ['s', 'h', 'v'])
+    ax.set_yticklabels(labels = ['h', 's', 'v'])
     plt.show()
 
 
